@@ -1,15 +1,11 @@
 package SmallPrograms;
-
 import java.util.*;
 import java.sql.*;
-
 class CGPACALACULATION  {
     static Scanner sc =new Scanner(System.in);
     static int ch;
     static double gpacal=0.0;
-
     static Connection con;
-
     {
         try {
             String url="jdbc:mysql://localhost:3306/cgpa";
@@ -20,7 +16,6 @@ class CGPACALACULATION  {
             throw new RuntimeException(e);
         }
     }
-
     private static void CgpaCal(String name,String register_no) throws Exception {  //CGPA CALCULATION
         int sems;
         char st = 0;
@@ -163,7 +158,6 @@ class CGPACALACULATION  {
         System.out.println("Your semester -" + s +" gpa is " + semgpa);
         return semgpa;
     }
-
     private static double assignvalue(double cre){  //ASSIGN GRADE MARK
         String grade;
         double value =0.0,mark;
